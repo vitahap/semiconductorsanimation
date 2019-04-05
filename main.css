@@ -1,0 +1,112 @@
+body{
+background: url(http://gite-les-melezes.fr/_V3/wp-content/uploads/2017/06/light-wood-texture.jpg);
+font:1em 'pt Sans',Tahoma,Arial;
+}
+#wrapper{
+margin: 80px;
+perspective: 900px;
+}
+
+#cube{
+position: relative;
+width: 300px;
+height: 300px;
+transform-origin: 50% 50% -150px; 
+transform-style: preserve-3d;
+z-index: 10;
+cursor: pointer;
+}
+
+.side{
+width: 300px;
+height: 300px;
+background: rgba(0,0,0,.3);
+background: radial-gradient(rgba(0,0,0,.1), rgba(0,0,0,.6));
+position: absolute;
+border: 10px  solid#fff;
+border-radius: 10px;
+font-size: 5em;
+color: #fff;
+line-height: 300px;
+text-align: center;
+text-shadow: 0 1px 3px rgba(0,0,0,.4);
+box-shadow: 0 0 6px rgba(0,0,0,.5);
+transform-origin: 50% 50% -150px;
+/*backface-visibility: hidden;*/ 
+}
+
+#side2{
+  transform: rotateY(90deg);
+}
+#side3{
+  transform: rotateY(-90deg);
+}
+#side4{
+  transform: rotateX(90deg);
+}
+#side5{
+  transform: rotateX(-90deg);
+}
+#side6{
+  transform: rotateY(180deg);
+}
+
+
+
+.cont3{
+background: rgba(0,0,0,.3);
+width:450px;
+height: 350px;
+margin: 10px;
+line-height: 150px;
+text-align: center;
+font-size: 1.2em;
+color: #fff;
+border:3px solid#fff;
+border-radius: 8px;
+transform:translate(100px, 0px) rotate3d(1,1,1,30deg);
+z-index: -9;
+}
+
+
+
+#wrap{
+  perspective: 500px;
+  width:400px;
+  height:200px;
+}
+
+#optimus{
+width: 450px;
+height: 350px;
+
+}
+.cont{
+  width: 900px;
+  height: 600px;
+  float:left;
+  margin: 40px;
+  background: #999;
+  border-radius: 5px;
+  box-shadow: 0 8px 15px rgba(0,0,0,.6);
+  border-radius: 5px;
+position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.cont::after{
+content: '';
+width: 900px;
+height: 600px;
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+background: radial-gradient(transparent, rgba(0,0,0,.7));
+transition: opacity .3s;
+}
+.cont:hover::after
+{
+opacity: 0;
+
+}
